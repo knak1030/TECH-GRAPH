@@ -35,7 +35,7 @@ export default StaticPropsDetail
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Get the paths we want to pre-render based on users
-  const items: User[] = await (await fetch(`${process.env.ORIGIN_URL}/api/users`)).json();
+  const items: User[] = await (await fetch(`${process.env.VERCEL_URL}/api/users`)).json();
   const paths = items.map((user: User) => ({
     params: { id: user.id.toString() },
   }))
