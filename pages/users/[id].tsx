@@ -51,7 +51,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
     const id = params?.id
-    const items: User[] = await (await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000'}/api/users`)).json();
+    const items: User[] = await (await fetch(`${process.env.VERCEL_URL || 'http://localhost:3000'}/api/users`)).json();
     if (!items) {
       throw new Error('Cannot find user data')
     }
