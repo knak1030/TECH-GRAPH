@@ -26,7 +26,7 @@ function nodePaint(node, ctx) {
     ctx.fillText(node.name, node.x, node.y);
 }
 
-const Graph = ({ data }: Props) => (
+const ImpactGraph = ({ data }: Props) => (
     <ForceGraph2D
         height={params.height}
         backgroundColor={params.backgroundColor}
@@ -44,7 +44,9 @@ const Graph = ({ data }: Props) => (
         nodeCanvasObject={(node, ctx) => nodePaint(node, ctx)}
         nodeVal={params.nodeVal}
         nodeCanvasObjectMode={() => 'after'}
+        linkDirectionalArrowLength={3.5}
+        linkDirectionalArrowRelPos={1}
     />
 )
 
-export default Graph
+export default ImpactGraph

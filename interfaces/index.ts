@@ -13,14 +13,14 @@ export type GraphNode = {
   id: number
   name: string
   group: number,
-  tag: number[],
   point: number,
   description: string
 }
 
 export type GraphLink = {
   source: number,
-  target: number
+  target: number,
+  impact: number
 }
 
 export type GraphData = {
@@ -42,6 +42,7 @@ export const Group = {
 }
 
 export type Params = {
+  height: number,
   backgroundColor: string,
   nodeColor: string,
   nodeRelSize: number,

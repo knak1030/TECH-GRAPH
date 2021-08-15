@@ -28,6 +28,11 @@ const Layout = ({ children, title = 'This is the default title'} : Props) => (
               <a>Graph</a>
             </Link>
           </Menu.Item>
+          <Menu.Item key="relation">
+            <Link href="/relation">
+              <a>Relation</a>
+            </Link>
+          </Menu.Item>
           <Menu.Item key="about">
             <Link href="/about">
               <a>About</a>
@@ -35,7 +40,7 @@ const Layout = ({ children, title = 'This is the default title'} : Props) => (
           </Menu.Item>
         </Menu>
       </Header>
-      <Content style={{ margin: '0 50px' }}>
+      <Content style={{ padding: '0 50px' }}>
         <div style={{ overflow: 'hidden', background: '#ffffff' }}>{children}</div>
       </Content>
       <Footer style={{ textAlign: 'center' }}>
