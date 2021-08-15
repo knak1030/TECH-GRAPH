@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react'
+React.useLayoutEffect = React.useEffect
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Head from 'next/head'
@@ -30,11 +31,6 @@ const Layout = ({ children, title = 'This is the default title'} : Props) => (
           <Menu.Item key="about">
             <Link href="/about">
               <a>About</a>
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="users">
-            <Link href="/users">
-              <a>User</a>
             </Link>
           </Menu.Item>
         </Menu>
