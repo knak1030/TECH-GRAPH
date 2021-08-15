@@ -14,7 +14,6 @@ const nodes: GraphNode[] = [
     id: 0,
     name: "React",
     group: 1,
-    tag: [2, 4],
     point: 50,
     description: `description hogehoge of React`
   },
@@ -22,7 +21,6 @@ const nodes: GraphNode[] = [
     id: 1,
     name: "Vue.js",
     group: 1,
-    tag: [2],
     point: 10,
     description: `description hogehoge of Vue`
   },
@@ -30,7 +28,6 @@ const nodes: GraphNode[] = [
     id: 2,
     name: "JS",
     group: 0,
-    tag: [],
     point: 30,
     description: `description hogehoge of JS`
   },
@@ -38,7 +35,6 @@ const nodes: GraphNode[] = [
     id: 3,
     name: "JS-class-syntax",
     group: 2,
-    tag: [2],
     point: 0,
     description: `description hogehoge of JS-class-syntax`
   },
@@ -46,18 +42,28 @@ const nodes: GraphNode[] = [
     id: 4,
     name: "TS",
     group: 0,
-    tag: [2],
     point: 10,
     description: `description hogehoge of TS`
   },
 ]
 
-const links: GraphLink[] = nodes.map(node => (
-  node.tag.map(item => ({
-      "source": node.id,
-      "target": item
-  }))
-)).flat()
+const links: GraphLink[] = [
+  {
+    source: 0,
+    target: 1,
+    impact: 0.5
+  },
+  {
+    source: 0,
+    target: 2,
+    impact: 1
+  },
+  {
+    source: 0,
+    target: 3,
+    impact: 0
+  }
+]
 
 export const graphData: GraphData = {
   nodes: nodes,
