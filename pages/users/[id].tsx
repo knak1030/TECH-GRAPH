@@ -35,7 +35,7 @@ export default StaticPropsDetail
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Get the paths we want to pre-render based on users
-  const items: User[] = await (await fetch(`${process.env.VERCEL_URL || 'http://localhost:3000'}/api/users`)).json();
+  const items: User[] = await (await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/users`)).json();
   const paths = items.map((user: User) => ({
     params: { id: user.id.toString() },
   }))
@@ -51,7 +51,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
     const id = params?.id
-    const items: User[] = await (await fetch(`${process.env.VERCEL_URL || 'http://localhost:3000'}/api/users`)).json();
+    const items: User[] = await (await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/users`)).json();
     if (!items) {
       throw new Error('Cannot find user data')
     }
