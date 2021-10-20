@@ -21,8 +21,8 @@ const params: Params = {
 }
 
 function nodePaint(node, ctx) {
-    ctx.fillStyle = '#333';
-    ctx.font = '8px Roboto';  
+    ctx.fillStyle = 'rgba(0,0,0,0.6)';
+    ctx.font = '5px Roboto';
     ctx.fillText(node.name, node.x, node.y);
 }
 
@@ -38,7 +38,6 @@ const ImpactGraph = ({ data }: Props) => (
             id: ${node.id}<br>
             name: ${data.nodes[node.id].name}<br>
             group: ${Group[data.nodes[node.id].group]}<br>
-            description: ${data.nodes[node.id].description}<br>
             point: ${data.nodes[node.id].point}
         `}
         nodeCanvasObject={(node, ctx) => nodePaint(node, ctx)}

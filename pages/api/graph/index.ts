@@ -52,8 +52,7 @@ export const getNodes = async (): Promise<GraphNode[]> => {
         id: Number(row[0]),
         name: row[1],
         group: Number(row[2]),
-        point: Number(row[3]),
-        description: row[4]
+        point: Number(row[3])
       }
     })
 

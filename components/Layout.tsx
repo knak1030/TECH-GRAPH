@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-React.useLayoutEffect = React.useEffect
+// React.useLayoutEffect = React.useEffect
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Head from 'next/head'

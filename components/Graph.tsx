@@ -13,7 +13,7 @@ const params: Params = {
     height: 600,
     backgroundColor: '#fff',
     nodeColor: "#9baf93",
-    nodeRelSize: 2,
+    nodeRelSize: 4,
     nodeAutoColorBy: "group",
     nodeVal: "point",
     nodeOpacity: 0.7,
@@ -21,8 +21,8 @@ const params: Params = {
 }
 
 function nodePaint(node, ctx) {
-    ctx.fillStyle = '#333';
-    ctx.font = '8px Roboto';  
+    ctx.fillStyle = 'rgba(0,0,0,0.6)';
+    ctx.font = '5px Roboto';
     ctx.fillText(node.name, node.x, node.y);
 }
 
@@ -38,12 +38,12 @@ const Graph = ({ data }: Props) => (
             id: ${node.id}<br>
             name: ${data.nodes[node.id].name}<br>
             group: ${Group[data.nodes[node.id].group]}<br>
-            description: ${data.nodes[node.id].description}<br>
             point: ${data.nodes[node.id].point}
         `}
         nodeCanvasObject={(node, ctx) => nodePaint(node, ctx)}
         nodeVal={params.nodeVal}
         nodeCanvasObjectMode={() => 'after'}
+        linkVisibility="false"
     />
 )
 
