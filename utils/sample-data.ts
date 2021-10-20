@@ -14,36 +14,31 @@ const nodes: GraphNode[] = [
     id: 0,
     name: "React",
     group: 1,
-    point: 50,
-    description: `description hogehoge of React`
+    point: 50
   },
   {
     id: 1,
     name: "Vue.js",
     group: 1,
-    point: 10,
-    description: `description hogehoge of Vue`
+    point: 10
   },
   {
     id: 2,
     name: "JS",
     group: 0,
-    point: 30,
-    description: `description hogehoge of JS`
+    point: 30
   },
   {
     id: 3,
     name: "JS-class-syntax",
     group: 2,
-    point: 0,
-    description: `description hogehoge of JS-class-syntax`
+    point: 0
   },
   {
     id: 4,
     name: "TS",
     group: 0,
-    point: 10,
-    description: `description hogehoge of TS`
+    point: 10
   },
 ]
 
